@@ -152,6 +152,14 @@
           "@type": "Answer",
           "text": "No. It is an independent local controller for compatible legacy Wemo devices and is not affiliated with or endorsed by Belkin."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "Can legacy Wemo devices be added to Matter controllers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A separate WeMo to Matter Bridge for Raspberry Pi project can expose compatible LAN Wemo devices as bridged Matter endpoints for Apple Home, Google Home, and other Matter controllers."
+        }
       }
     ]
   }
@@ -202,6 +210,14 @@
       </ul>
     </section>
 
+    <section aria-labelledby="matter">
+      <h2 id="matter">Want Matter Support?</h2>
+      <p>Use a Raspberry Pi as a local WeMo-to-Matter bridge to add compatible legacy Wemo devices to Apple Home, Google Home, or another Matter controller.</p>
+      <p>Normal users should use the latest <a href="https://github.com/jolie1204/openwrt-wemo-matter-bridge/releases">WeMo to Matter Bridge for Raspberry Pi release</a>. Raspberry Pi 4 or CM4 is the recommended target. Raspberry Pi 5 or CM5 may be available or experimental depending on the current release.</p>
+      <p>Download the correct <code>openwemo-rpi*-...-sysupgrade.img.gz</code> image from the release page and follow its flashing and pairing instructions. The QR code pairs the bridge once; individual Wemo devices appear as bridged Matter endpoints.</p>
+      <p>This bridge is a separate local project and does not claim Matter certification.</p>
+    </section>
+
     <section aria-labelledby="faq">
       <h2 id="faq">FAQ</h2>
 
@@ -216,6 +232,9 @@
 
       <h3>Does it set up new Wemo devices?</h3>
       <p>Setup is planned, but currently disabled while compatibility and credential handling continue testing. The current focus is controlling devices already on your home network.</p>
+
+      <h3>Can I add Wemo devices to Apple Home or Google Home with Matter?</h3>
+      <p>Use the separate WeMo to Matter Bridge for Raspberry Pi release. The bridge runs locally and exposes compatible LAN Wemo devices as bridged Matter endpoints.</p>
 
       <h3>What device information leaves my phone?</h3>
       <p>Local Wemo names, IP addresses, rooms, and troubleshooting details stay on the phone unless you choose to share diagnostics. The app uses Google Mobile Ads, so advertising-related data is handled under Google policies.</p>
