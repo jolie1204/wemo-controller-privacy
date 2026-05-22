@@ -1,7 +1,8 @@
-# WEMO Controller Privacy Policy
+# WEMO Controller Public Pages
 
-Static privacy policy page for WEMO Controller.
+Static public pages for WEMO Controller.
 
-Published URL:
+Published URLs:
 
-https://jolie1204.github.io/wemo-controller-privacy/
+- Privacy policy: https://jolie1204.github.io/wemo-controller-privacy/
+- Local Wemo control FAQ: https://jolie1204.github.io/wemo-controller-privacy/local-wemo-control.html

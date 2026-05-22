@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jolie1204.github.io/wemo-controller-privacy/sitemap.xml
