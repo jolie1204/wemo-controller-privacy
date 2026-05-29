@@ -2,8 +2,6 @@
 
 ## Public Links
 
-- Landing page: https://jolie1204.github.io/wemo-controller-privacy/local-wemo-control.html
-- Privacy policy: https://jolie1204.github.io/wemo-controller-privacy/
 - Android: https://play.google.com/store/apps/details?id=com.meonmesh.lot.wemocontroller
 - iOS: submitted to App Review on May 29, 2026. Add the live App Store link after approval.
 
@@ -23,9 +21,6 @@ Android is available now:
 https://play.google.com/store/apps/details?id=com.meonmesh.lot.wemocontroller
 
 The iOS version has been submitted to App Review.
-
-More details:
-https://jolie1204.github.io/wemo-controller-privacy/local-wemo-control.html
 
 Independent project. Not affiliated with or endorsed by Belkin or Wemo.
 
@@ -51,9 +46,6 @@ Android is available now:
 https://play.google.com/store/apps/details?id=com.meonmesh.lot.wemocontroller
 
 The iOS version has been submitted to App Review.
-
-Details and privacy notes:
-https://jolie1204.github.io/wemo-controller-privacy/local-wemo-control.html
 
 Limitations:
 

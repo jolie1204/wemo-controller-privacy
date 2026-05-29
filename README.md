@@ -2,10 +2,10 @@
 
 Static public pages for WEMO Controller.
 
-Published URLs:
+Published pages:
 
-- Privacy policy: https://jolie1204.github.io/wemo-controller-privacy/
-- Local Wemo control FAQ: https://jolie1204.github.io/wemo-controller-privacy/local-wemo-control.html
+- Privacy policy
+- Local Wemo control FAQ
 
 Promotion drafts:
 
