@@ -3,24 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Local Wemo Control for Legacy Wemo Devices</title>
-  <meta name="description" content="A local Android controller for compatible legacy Wemo smart plugs, switches, and dimmers on your home Wi-Fi or LAN. No cloud account required.">
+  <title>Wemo Controller - Local Control for Legacy Wemo Devices</title>
+  <meta name="description" content="Wemo Controller is an independent local controller for compatible legacy Wemo plugs, switches, dimmers, and Insight devices. No Belkin cloud required.">
   <link rel="canonical" href="https://jolie1204.github.io/wemo-controller-privacy/local-wemo-control.html">
   <style>
     :root {
       color-scheme: light;
-      --accent: #5f5aa2;
-      --accent-strong: #3f397e;
-      --background: #f7f8fb;
-      --border: #d8dee8;
+      --accent: #1f8a70;
+      --accent-strong: #146c5a;
+      --background: #f5f8f7;
+      --border: #d8e2df;
       --panel: #ffffff;
       --text: #1f2328;
       --muted: #59636f;
+      --soft: #e8f4f1;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       background: var(--background);
@@ -36,19 +35,14 @@
       padding: 40px 20px 64px;
     }
 
-    header {
-      padding: 24px 0 20px;
-    }
+    header { padding: 24px 0 20px; }
 
-    h1,
-    h2,
-    h3 {
-      line-height: 1.25;
-    }
+    h1, h2, h3 { line-height: 1.25; }
 
     h1 {
       font-size: clamp(2rem, 6vw, 4rem);
       margin: 0;
+      max-width: 820px;
     }
 
     h2 {
@@ -61,17 +55,9 @@
       margin: 1.5rem 0 0.4rem;
     }
 
-    p {
-      margin: 0.7rem 0;
-    }
-
-    a {
-      color: var(--accent-strong);
-    }
-
-    ul {
-      padding-left: 1.25rem;
-    }
+    p { margin: 0.7rem 0; }
+    a { color: var(--accent-strong); }
+    ul { padding-left: 1.25rem; }
 
     .lede {
       color: var(--muted);
@@ -80,12 +66,37 @@
     }
 
     .notice {
-      background: #eef0ff;
-      border: 1px solid #d8d8fb;
+      background: var(--soft);
+      border: 1px solid #c9e5de;
       border-radius: 8px;
       color: var(--accent-strong);
       margin-top: 24px;
       padding: 14px 16px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .button {
+      align-items: center;
+      background: var(--accent-strong);
+      border-radius: 8px;
+      color: #fff;
+      display: inline-flex;
+      font-weight: 700;
+      min-height: 44px;
+      padding: 10px 16px;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: #fff;
+      border: 1px solid var(--border);
+      color: var(--accent-strong);
     }
 
     .grid {
@@ -95,27 +106,23 @@
       margin-top: 20px;
     }
 
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 18px;
-    }
-
-    .card h3 {
-      margin-top: 0;
-    }
-
+    .card,
     .cta {
       background: var(--panel);
       border: 1px solid var(--border);
       border-radius: 8px;
-      margin-top: 28px;
       padding: 18px;
     }
 
-    .cta a {
-      font-weight: 700;
+    .card h3 { margin-top: 0; }
+
+    .cta { margin-top: 28px; }
+    .cta a { font-weight: 700; }
+
+    .status {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 8px;
     }
 
     footer {
@@ -127,50 +134,30 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Does Local Control for Wemo require a Wemo cloud account?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. The app is designed for local home-network control using compatible Wemo devices on the same Wi-Fi or LAN."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can this app control Wemo devices away from home?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. The app is for local Wi-Fi or LAN control only. Your Android phone must be on the same local network as the devices."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is this an official Belkin or Wemo app?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. It is an independent local controller for compatible legacy Wemo devices and is not affiliated with or endorsed by Belkin."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can legacy Wemo devices be added to Matter controllers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A separate WeMo to Matter Bridge for Raspberry Pi project can expose compatible LAN Wemo devices as bridged Matter endpoints for Apple Home, Google Home, and other Matter controllers."
-        }
-      }
-    ]
+    "@type": "SoftwareApplication",
+    "name": "Wemo Controller",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Android, iOS",
+    "description": "Independent local Wi-Fi/LAN controller for compatible legacy Wemo devices. No Belkin cloud required.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
   }
   </script>
 </head>
 <body>
   <main>
     <header>
-      <h1>Local Wemo control without a cloud account</h1>
-      <p class="lede">Local Control for Wemo is an Android app for compatible legacy Wemo smart plugs, switches, and dimmers on your home Wi-Fi or LAN.</p>
-      <p class="notice">Independent local controller for compatible legacy Wemo devices. Not affiliated with or endorsed by Belkin.</p>
+      <h1>Local Wemo control without the Belkin cloud</h1>
+      <p class="lede">Wemo Controller helps keep compatible legacy Wemo plugs, switches, dimmers, and Insight devices useful with local Wi-Fi/LAN control.</p>
+      <p class="notice">Independent local controller for compatible legacy Wemo devices. Not affiliated with or endorsed by Belkin or Wemo.</p>
+      <div class="actions" aria-label="Download links">
+        <a class="button" href="https://play.google.com/store/apps/details?id=com.meonmesh.lot.wemocontroller">Get it on Google Play</a>
+        <a class="button secondary" href="#ios-status">iOS App Store submitted</a>
+      </div>
+      <p class="status" id="ios-status">iOS version 1.0.0 has been submitted to App Review. The App Store link will be added after approval.</p>
     </header>
 
     <section aria-labelledby="what-it-does">
@@ -178,19 +165,19 @@
       <div class="grid">
         <article class="card">
           <h3>Local discovery</h3>
-          <p>Find compatible Wemo devices on the same Wi-Fi or wired LAN using local UPnP discovery.</p>
+          <p>Find compatible Wemo devices on the same Wi-Fi or wired LAN using local discovery and descriptor probing.</p>
         </article>
         <article class="card">
           <h3>Local control</h3>
-          <p>Turn supported plugs and switches on or off, and adjust supported dimmers, using local device requests.</p>
+          <p>Turn supported plugs and switches on or off, adjust supported dimmers, and refresh current state using local device requests.</p>
         </article>
         <article class="card">
-          <h3>No cloud account</h3>
-          <p>The app does not require a Wemo or Belkin account. It is focused on home-network control.</p>
+          <h3>No Belkin cloud account</h3>
+          <p>The app focuses on home-network control and does not require signing in to a Belkin or Wemo cloud account.</p>
         </article>
         <article class="card">
           <h3>Device organization</h3>
-          <p>Use rooms, favorites, saved order, widgets, and device detail screens to keep older Wemo devices usable.</p>
+          <p>Save known devices, arrange Things, keep favorites, view details, and use local troubleshooting tools.</p>
         </article>
       </div>
     </section>
@@ -201,21 +188,25 @@
       <p>It is not a cloud bridge, not an outside-home remote access service, and not an official replacement app from Belkin.</p>
     </section>
 
-    <section aria-labelledby="requirements">
-      <h2 id="requirements">Requirements</h2>
+    <section aria-labelledby="features">
+      <h2 id="features">Current Features</h2>
       <ul>
-        <li>An Android phone or tablet on the same Wi-Fi or LAN as the Wemo devices.</li>
-        <li>Compatible legacy Wemo devices that expose local UPnP/SOAP control.</li>
-        <li>Local network settings that allow multicast discovery. If discovery misses a device, the app can try a manual local IP address.</li>
+        <li>Compatible legacy Wemo plug, switch, dimmer, and Insight discovery on the local network.</li>
+        <li>On/off state refresh and guarded on/off control for supported devices.</li>
+        <li>Dimmer brightness control where compatible local Wemo dimmer services are available.</li>
+        <li>Insight power usage display where compatible local Insight services are available.</li>
+        <li>Manual IP find path for older devices that do not advertise automatically.</li>
+        <li>Local saved devices, favorites, custom labels, rooms, and ordering.</li>
       </ul>
     </section>
 
-    <section aria-labelledby="matter">
-      <h2 id="matter">Want Matter Support?</h2>
-      <p>Use a Raspberry Pi as a local WeMo-to-Matter bridge to add compatible legacy Wemo devices to Apple Home, Google Home, or another Matter controller.</p>
-      <p>Normal users should use the latest <a href="https://github.com/jolie1204/openwrt-wemo-matter-bridge/releases">WeMo to Matter Bridge for Raspberry Pi release</a>. Raspberry Pi 4 or CM4 is the recommended target. Raspberry Pi 5 or CM5 may be available or experimental depending on the current release.</p>
-      <p>Download the correct <code>openwemo-rpi*-...-sysupgrade.img.gz</code> image from the release page and follow its flashing and pairing instructions. The QR code pairs the bridge once; individual Wemo devices appear as bridged Matter endpoints.</p>
-      <p>This bridge is a separate local project and does not claim Matter certification.</p>
+    <section aria-labelledby="requirements">
+      <h2 id="requirements">Requirements</h2>
+      <ul>
+        <li>Your phone or tablet must be on the same Wi-Fi/LAN as the Wemo devices.</li>
+        <li>Devices must expose compatible local Wemo UPnP/SOAP services.</li>
+        <li>Some older devices may need to be found by IP address if automatic discovery misses them.</li>
+      </ul>
     </section>
 
     <section aria-labelledby="faq">
@@ -231,10 +222,10 @@
       <p>No. It targets compatible legacy Wemo devices that expose local UPnP/SOAP control. Unsupported models may not appear or may show limited functionality.</p>
 
       <h3>Does it set up new Wemo devices?</h3>
-      <p>Setup is planned, but currently disabled while compatibility and credential handling continue testing. The current focus is controlling devices already on your home network.</p>
+      <p>The current public focus is controlling devices already on your home network. Setup features are intentionally limited while compatibility and credential handling continue testing.</p>
 
-      <h3>Can I add Wemo devices to Apple Home or Google Home with Matter?</h3>
-      <p>Use the separate WeMo to Matter Bridge for Raspberry Pi release. The bridge runs locally and exposes compatible LAN Wemo devices as bridged Matter endpoints.</p>
+      <h3>Does it use Matter, HomeKit, Google Home, or Belkin cloud control?</h3>
+      <p>No. Wemo Controller uses local Wemo device services where available. It does not implement Matter, HomeKit control, Google Home integration, or Belkin cloud remote access.</p>
 
       <h3>What device information leaves my phone?</h3>
       <p>Local Wemo names, IP addresses, rooms, and troubleshooting details stay on the phone unless you choose to share diagnostics. The app uses Google Mobile Ads, so advertising-related data is handled under Google policies.</p>
@@ -246,7 +237,8 @@
     </section>
 
     <footer>
-      <p>Local Control for Wemo is independent software for compatible legacy Wemo devices. Wemo and Belkin names are used only to identify compatible devices.</p>
+      <p>Wemo Controller is independent software for compatible legacy Wemo devices. Wemo and Belkin names are used only to identify compatible devices.</p>
+      <p>Contact: <a href="mailto:meonmesh@gmail.com">meonmesh@gmail.com</a></p>
     </footer>
   </main>
 </body>
